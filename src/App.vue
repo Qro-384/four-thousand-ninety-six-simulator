@@ -33,7 +33,7 @@ function getResultStyle(result) {
 <template>
   <header>
     <h1>4096 Simulator</h1>
-    <p>ボタンを押すごとに1/4096を引くまでシミュレーションを実行します。</p>
+    <p>ボタンを押すごとに1/4096を引き当てるまでシミュレーションを実行します。</p>
   </header>
 
   <main>
@@ -45,7 +45,6 @@ function getResultStyle(result) {
       <h2>結果</h2>
       <TransitionGroup v-if="results.length > 0" name="list" tag="ul" class="results-list">
         <li v-for="item in results" :key="item.id" class="result-item">
-          <span class="timestamp">[{{ item.timestamp }}]</span>
           <span class="text">Result:</span>
           <strong class="value" :style="getResultStyle(item.result)">{{ item.result }}</strong>
           <span class="attempts">attempts</span>
